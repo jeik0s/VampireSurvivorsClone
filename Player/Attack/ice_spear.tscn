@@ -9,6 +9,7 @@ size = Vector2(35.3553, 7.77818)
 
 [node name="IceSpear" type="Area2D" groups=["attack"]]
 top_level = true
+scale = Vector2(0.1, 0.1)
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("1_4mr72")

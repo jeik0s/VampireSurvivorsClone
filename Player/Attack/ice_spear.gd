@@ -23,10 +23,14 @@ func _ready() -> void:
 			knock_amount = 100;
 			attack_size = 1.0;
 	
+	var tween = create_tween()
+	tween.tween_property(self,"scale",Vector2(1,1)*attack_size,1).set_trans(Tween.TRANS_QUINT).set_ease(tween.EASE_OUT)
+	tween.play()
+	
 func _physics_process(delta):
 	position += angle * speed * delta
 	
-func enemy_hit(charge = 1):
+func enemy_hit(charge = 2):
 	hp -= charge
 	if hp <= 0:
 		queue_free()
