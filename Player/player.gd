@@ -55,7 +55,7 @@ func attack():
 			icespear_timer.start()
 
 
-func _on_hurt_box_hurt(damage):
+func _on_hurt_box_hurt(damage, _angle, _knockback_amount):
 	hp -= damage
 	print(hp)
 
